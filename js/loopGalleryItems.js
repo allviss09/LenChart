@@ -16,7 +16,7 @@ function loopGalleryItems(data) {
         <p class="tm-figure-description">
           ${item.description}
         </p>
-        <a href="img/${item.name}jpg">View more</a>
+        <a href="img/${item.name}.jpg">View more</a>
       </figcaption>
     </figure>
   </div>`
