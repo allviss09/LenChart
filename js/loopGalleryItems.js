@@ -11,7 +11,7 @@ function loopGalleryItems(data) {
       />
       <figcaption>
         <h2 class="tm-figure-title">
-          Image <span><strong>${index+1}</strong></span>
+          Chart <span><strong>${index+1}</strong></span>
         </h2>
         <p class="tm-figure-description">
           ${item.description}
