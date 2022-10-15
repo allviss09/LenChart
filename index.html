@@ -37,10 +37,7 @@ http://www.templatemo.com/tm-500-fluid-gallery
 
     <script src="js/jquery-1.11.3.min.js"></script>
     <!-- jQuery (https://jquery.com/download/) -->
-    <script type="text/javascript" src="./constant/constant.js"></script>
-    <script type="text/javascript" src="./js/loopGalleryItems.js"></script>
     <script type="text/javascript" src="./js/fetchData.js"></script>
-    <script type="module" src="./js/testWriteFile.js"></script>
     <script>
       var tm_gray_site = false;
 
@@ -286,19 +283,19 @@ http://www.templatemo.com/tm-500-fluid-gallery
         center = map.getCenter();
       }
 
-      function loadGoogleMap() {
-        var script = document.createElement("script");
-        script.type = "text/javascript";
-        script.src =
-          "https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&" +
-          "callback=initialize";
-        document.body.appendChild(script);
-      }
+      // function loadGoogleMap() {
+      //   var script = document.createElement("script");
+      //   script.type = "text/javascript";
+      //   script.src =
+      //     "https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&" +
+      //     "callback=initialize";
+      //   document.body.appendChild(script);
+      // }
 
       // DOM is ready
-      $(function () {
-        loadGoogleMap(); // Google Map
-      });
+      //$(function () {
+       //loadGoogleMap(); // Google Map
+      //});
     </script>
   </body>
 </html>
