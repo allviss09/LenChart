@@ -37,21 +37,10 @@ http://www.templatemo.com/tm-500-fluid-gallery
 
     <script src="js/jquery-1.11.3.min.js"></script>
     <!-- jQuery (https://jquery.com/download/) -->
-    <!-- <script>
-      const promiseData = fetch("./constant/data.json")
-        .then((response) => response.json())
-        .then((responseData) => {
-          return responseData.data;
-        })
-        .catch((error) => console.log(error));
-    const Data = async()=>{
-        const data = await promiseData;
-        return data;
-    }
-    Data();
-    </script> -->
     <script type="text/javascript" src="./constant/constant.js"></script>
     <script type="text/javascript" src="./js/loopGalleryItems.js"></script>
+    <script type="text/javascript" src="./js/fetchData.js"></script>
+    <script type="module" src="./js/testWriteFile.js"></script>
     <script>
       var tm_gray_site = false;
 
@@ -116,8 +105,7 @@ http://www.templatemo.com/tm-500-fluid-gallery
               <div class="tm-img-gallery-container">
                 <div class="tm-img-gallery gallery-one">
                   <script type="text/javascript">
-                    console.log("data",mydata)
-                    loopGalleryItems(mydata)
+                    loopData()
                   </script>
                 </div>
               </div>
