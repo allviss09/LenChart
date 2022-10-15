@@ -12,18 +12,18 @@ function loopGalleryItems(data) {
       output = `<div class="grid-item">
       <figure class="effect-sadie">
         <img
-          src="img/${item.name}-tn.jpg"
+          src="img/${item.thumbnail}"
           alt="Image"
           class="img-fluid tm-img"
         />
         <figcaption>
           <h2 class="tm-figure-title">
-            Chart <span><strong>${index+1}</strong></span>
+            Chart <span><strong>${item.name}</strong></span>
           </h2>
           <p class="tm-figure-description">
             ${item.description}
           </p>
-          <a href="img/${item.name}.jpg">View more</a>
+          <a href="img/${item.image}">View more</a>
         </figcaption>
       </figure>
     </div>`

@@ -2,43 +2,15 @@
     "data":
     [
         {
-            "name": "tm-img-01",
-            "img": "",
+            "name": "Meo Sau",
+            "image": "tm-img-01.jpg",
+            "thumbnail": "tm-img-01-tn.jpg",
             "description": "This is Kuromi Chart"
         },
         {
-            "name": "tm-img-02",
-            "img": "",
-            "description": "This is Kuromi Chart"
-        },
-        {
-            "name": "tm-img-03",
-            "img": "",
-            "description": "This is Kuromi Chart"
-        },
-        {
-            "name": "tm-img-04",
-            "img": "",
-            "description": "This is Kuromi Chart"
-        },
-        {
-            "name": "tm-img-05",
-            "img": "",
-            "description": "This is Kuromi Chart"
-        },
-        {
-            "name": "tm-img-06",
-            "img": "",
-            "description": "This is Kuromi Chart"
-        },
-        {
-            "name": "tm-img-07",
-            "img": "",
-            "description": "This is Kuromi Chart"
-        },
-        {
-            "name": "tm-img-08",
-            "img": "",
+            "name": "Meo Con",
+            "image": "tm-img-02.jpg",
+            "thumbnail": "tm-img-02-tn.jpg",
             "description": "This is Kuromi Chart"
         }
     ]
