@@ -45,7 +45,7 @@
       <div class="cd-slider-nav">
         <nav class="navbar">
           <div class="tm-navbar-bg">
-            <a class="navbar-brand text-uppercase" href="./index.html"
+            <a class="navbar-brand text-uppercase" href="admin.html"
               ><i class="fa fa-picture-o tm-brand-icon"></i>Crochet Pattern</a
             >
 
@@ -62,12 +62,12 @@
               id="tmNavbar"
             >
               <ul class="nav navbar-nav">
-                <li id="navPattern" class="nav-item" hidden>
+                <li id="navPattern" class="nav-item active selected" hidden>
                   <a class="nav-link" href="./admin.html" data-no="1">
                     Pattern <span class="sr-only">(current)</span>
                   </a>
                 </li>
-                <li class="nav-item active selected">
+                <li class="nav-item ">
                   <a class="nav-link" href="/index.html" data-no="2"> Album </a>
                 </li>
                 <li class="nav-item">
@@ -97,7 +97,7 @@
                 <div class="tm-img-gallery gallery-one">
                   <!-- Gallery One pop up connected with JS code below -->
                   <script type="text/javascript">
-                    loopData(false);
+                    loopData(true);
                   </script>
                 </div>
               </div>
@@ -105,6 +105,7 @@
             </div>
           </div>
         </li>
+
 
         <!-- Page 5 Contact Us -->
         <li>
@@ -119,7 +120,8 @@
                     <div class="tm-flex tm-contact-container">
                       <div
                         class="tm-bg-white-translucent text-xs-left tm-textbox tm-2-col-textbox-2 tm-textbox-padding tm-textbox-padding-contact"
-                      ></div>
+                      >
+                      </div>
                       <div
                         class="tm-bg-white-translucent text-xs-left tm-textbox tm-2-col-textbox-2 tm-textbox-padding tm-textbox-padding-contact"
                       >
@@ -325,6 +327,7 @@
         document.getElementById("navPattern").removeAttribute("hidden");
       } else {
         loginLabel = "Login";
+        window.open("./index.html","_self");
       }
       document.getElementById("navLogin").innerHTML = loginLabel;
     </script>

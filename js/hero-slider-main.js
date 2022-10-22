@@ -24,7 +24,7 @@ jQuery(document).ready(function($){
 		
 		//change visible slide
 		sliderNav.on('click', 'li', function(event){
-			event.preventDefault();
+			// event.preventDefault();
 			var selectedItem = $(this);
 			if(!selectedItem.hasClass('selected')) {
 				// if it's not already selected
