@@ -99,7 +99,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create Crochet Pattern</title>
+    <title>Crochet Pattern</title>
   </head>
   <body>
     <div class="form-popup" id="myForm">
@@ -165,13 +165,13 @@
 
   function checkLogin() {
     const role = localStorage.getItem("role");
-    if (role == "admin") {
-      window.open("./admin.html", "_self");
+    if (role != "admin") {
+      window.open("./index.html", "_self");
     }
   }
 
   function backToHome() {
-    window.open("./admin.html", "_self");
+    history.go(-1);
   }
   const exampleForm = document.getElementById("createForm");
   exampleForm.addEventListener("submit", handleCreateForm);

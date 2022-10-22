@@ -1,9 +1,5 @@
 const imageUrl = "http://localhost:3000/image/";
 
-const promiseData = fetch("../constant/data.json")
-  .then((res) => res.json())
-  .then((resData) => resData.data);
-
 const loopData = async (isLogin) => {
   const data = await testFetch();
   await loopGalleryItems(data, isLogin);
@@ -16,7 +12,7 @@ async function testFetch() {
   return data;
 }
 
-function loopGalleryItems(data, isLogin) {
+async function loopGalleryItems(data, isLogin) {
   const target = document.querySelector(".gallery-one");
   let output = "";
   data.forEach(function callback(item, index) {
@@ -29,7 +25,7 @@ function loopGalleryItems(data, isLogin) {
         />
         <figcaption>
           <h2 class="tm-figure-title">
-            Chart <span><strong>${item.name}</strong></span>
+            <span><strong>${item.name}</strong></span>
           </h2>
           <p class="tm-figure-description">
             ${item.description}

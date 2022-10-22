@@ -6,7 +6,6 @@ async function handleLoginForm(event) {
 
   try {
     const formData = new FormData(form);
-    console.log("formdata",formData);
     const responseData = await postFormDataAsJson({ url, formData });
     console.log(responseData);
     if (responseData.role != null) {
@@ -27,16 +26,14 @@ async function handleLoginForm(event) {
 }
 
 async function postFormDataAsJson({ url, formData }) {
-  // const plainFormData = Object.fromEntries(formData.entries());
-  // const formDataJsonString = JSON.stringify(plainFormData);
-  // const formData = new FormData();
-  // const fileField = document.querySelector('input[type="file"]');
+  const plainFormData = Object.fromEntries(formData.entries());
+  const formDataJsonString = JSON.stringify(plainFormData);
   const fetchOptions = {
     method: "POST",
     headers: {
-      "Content-Type": "multipart/form-data",
+      "Content-Type": "application/json",
     },
-    body: formData,
+    body: formDataJsonString,
   };
 
   const response = await fetch(url, fetchOptions);
