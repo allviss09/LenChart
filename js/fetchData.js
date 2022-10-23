@@ -1,4 +1,4 @@
-const imageUrl = "http://localhost:3000/image/";
+const imageUrl = "https://lenchart-api.cyclic.app/image/";
 
 const loopData = async (isLogin) => {
   const data = await testFetch();
@@ -6,7 +6,7 @@ const loopData = async (isLogin) => {
 };
 
 async function testFetch() {
-  const url = "http://localhost:3000/lencharts";
+  const url = "https://lenchart-api.cyclic.app/lencharts";
   const response = await fetch(url);
   const data = await response.json();
   return data;

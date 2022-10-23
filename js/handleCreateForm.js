@@ -48,7 +48,7 @@ async function handleCreateForm(event) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Create Fail Gòi >_<",
+        text: "Create Fail Gòi >_< Cẩn Thận Trùng Tên Nò :>",
       });
     }
   } catch (error) {
@@ -59,7 +59,7 @@ async function handleCreateForm(event) {
 async function postFormDataAsJson({ url, data }) {
   let headers = new Headers();
 
-  headers.append("Access-Control-Allow-Origin", "http://localhost:3000");
+  headers.append("Access-Control-Allow-Origin", "https://lenchart-api.cyclic.app");
   headers.append("Access-Control-Allow-Credentials", "true");
 
   headers.append("POST", "OPTIONS");
