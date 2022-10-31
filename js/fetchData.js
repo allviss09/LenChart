@@ -6,8 +6,13 @@ const loopData = async (isLogin) => {
 };
 
 async function testFetch() {
+  let headers = new Headers();
+
+  headers.append("Access-Control-Allow-Origin", "https://lenchart-api.cyclic.app");
+  headers.append("Access-Control-Allow-Credentials", "true");
+
   const url = "https://lenchart-api.cyclic.app/lencharts";
-  const response = await fetch(url);
+  const response = await fetch(url,{headers});
   const data = await response.json();
   return data;
 }

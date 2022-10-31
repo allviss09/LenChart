@@ -171,7 +171,7 @@
   }
 
   function backToHome() {
-    history.go(-1);
+    window.open("./admin.html", "_self");
   }
   const exampleForm = document.getElementById("createForm");
   exampleForm.addEventListener("submit", handleCreateForm);
