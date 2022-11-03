@@ -1,5 +1,3 @@
-const imageUrl = "https://lenchart-api.cyclic.app/image/";
-
 const loopData = async (isLogin) => {
   const data = await testFetch();
   await loopGalleryItems(data, isLogin);
@@ -8,12 +6,13 @@ const loopData = async (isLogin) => {
 async function testFetch() {
   let headers = new Headers();
 
-  headers.append("Access-Control-Allow-Origin", "https://lenchart-api.cyclic.app");
+  headers.append("Access-Control-Allow-Origin", "http://localhost:3000");
   headers.append("Access-Control-Allow-Credentials", "true");
 
-  const url = "https://lenchart-api.cyclic.app/lencharts";
-  const response = await fetch(url,{headers});
-  const data = await response.json();
+  const url = "http://localhost:3000/lencharts";
+  const response = await fetch(url, { headers });
+  const { data } = await response.json();
+  console.log(data);
   return data;
 }
 
@@ -24,7 +23,7 @@ async function loopGalleryItems(data, isLogin) {
     output = `<div class="grid-item">
       <figure class="effect-sadie">
         <img
-          src="${imageUrl + item.thumbnail}"
+          src="${item.thumbnailAWSURL}"
           alt="Image"
           class="img-fluid tm-img"
         />
@@ -36,7 +35,7 @@ async function loopGalleryItems(data, isLogin) {
             ${item.description}
           </p>
           <a href="${
-            isLogin == true ? imageUrl + item.image : imageUrl + item.thumbnail
+            isLogin == true ? item.imageAWSURL : item.thumbnailAWSURL
           }">View more</a>
         </figcaption>
       </figure>

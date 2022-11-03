@@ -23,9 +23,9 @@ async function handleCreateForm(event) {
       document.querySelector("input[name='thumbnail']").files[0]
     );
 
-    const responseData = await postFormDataAsJson({ url, data });
-    console.log(responseData);
-    if (responseData.data != null) {
+    const {result} = await postFormDataAsJson({ url, data });
+    console.log(result.data);
+    if (result.data != null) {
       Swal.fire({
         title: "Creat Succes Gòi Ó >_<",
         width: 600,
@@ -44,7 +44,7 @@ async function handleCreateForm(event) {
         }
       });
     }
-    if (responseData.error != null) {
+    if (result.error != null) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
@@ -59,7 +59,7 @@ async function handleCreateForm(event) {
 async function postFormDataAsJson({ url, data }) {
   let headers = new Headers();
 
-  headers.append("Access-Control-Allow-Origin", "https://lenchart-api.cyclic.app");
+  headers.append("Access-Control-Allow-Origin", "http://localhost:3000");
   headers.append("Access-Control-Allow-Credentials", "true");
 
   headers.append("POST", "OPTIONS");

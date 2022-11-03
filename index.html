@@ -68,13 +68,13 @@
                   </a>
                 </li>
                 <li id="navManage" class="nav-item" hidden>
-                  <a class="nav-link" href="/management.html" data-no="2"> Manager </a>
+                  <a class="nav-link" href="/management.html" data-no="1"> Manager </a>
                 </li>
                 <li id="navCreate" class="nav-item" hidden>
-                  <a class="nav-link" href="/create.html" data-no="2"> Create </a>
+                  <a class="nav-link" href="/create.html" data-no="1"> Create </a>
                 </li>
                 <li id="navAlbum" class="nav-item active selected">
-                  <a class="nav-link" href="/index.html" data-no="2"> Album </a>
+                  <a class="nav-link" href="/index.html" data-no="1"> Album </a>
                 </li>
                 <li class="nav-item">
                   <a
@@ -103,7 +103,7 @@
                 <div class="tm-img-gallery gallery-one">
                   <!-- Gallery One pop up connected with JS code below -->
                   <script type="text/javascript">
-                    loopData(false);
+                    loopData(false).then(()=>{adjustHeightOfPage(1)})
                   </script>
                 </div>
               </div>
